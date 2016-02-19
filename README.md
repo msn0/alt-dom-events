@@ -1,4 +1,4 @@
-# alt-events-utils
+# alt-dom-events
 
 > dom events support for alt
 
