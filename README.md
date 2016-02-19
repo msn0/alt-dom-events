@@ -8,7 +8,7 @@ binds events fired on document to Alt actions, e.g.
 
 ```js
 import alt from './alt';
-import {bindDOMEvents} from 'alt-events-utils/lib/bind-dom-events';
+import {bindDOMEvents} from 'alt-dom-events';
 
 class FooActions {
   constructor() {
