@@ -32,7 +32,7 @@ document.dispatchEvent(new CustomEvent('foo-document-event', { detail: {}}));
 
 `bindDOMEvents` can be used as a decorator
 
-```
+```js
 import alt from './alt';
 import {createActions} from 'alt-utils/lib/decorators';
 import {bindDOMEvents} from 'alt-dom-events';
