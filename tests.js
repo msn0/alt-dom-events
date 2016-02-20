@@ -11,5 +11,19 @@ describe('bind dom events', () => {
     );
 
     expect(target.callback).to.have.been.calledWith({foo: 'bar'});
+    expect(target.callback).to.have.been.calledOnce;
   });
+
+  it('should support currying', () => {
+    const target = {callback: sinon.spy()};
+    bindDOMEvents({'foo-event': 'callback'})(target);
+
+    document.dispatchEvent(
+      new CustomEvent('foo-event', {detail: {foo: 'bar'}})
+    );
+
+    expect(target.callback).to.have.been.calledWith({foo: 'bar'});
+    expect(target.callback).to.have.been.calledOnce;
+  });
+
 });

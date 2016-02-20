@@ -1,14 +1,14 @@
 # alt-dom-events
 
-> dom events support for alt
+> dom events support for [alt](https://github.com/goatslacker/alt)
 
 ## bindDOMEvents
 
-binds events fired on document to Alt actions, e.g. 
+Binds events fired on document to Alt actions, e.g. 
 
 ```
 import alt from './alt';
-import {bindDOMEvents} from 'alt-events-utils/lib/bind-dom-events';
+import {bindDOMEvents} from 'alt-dom-events';
 
 class FooActions {
   constructor() {
@@ -21,3 +21,36 @@ export default bindDOMEvents({
   'bar-document-event': 'bar'
 }, alt.createActions(FooActions));
 ```
+
+The following fires action `FooActions.foo` when `foo-document-event` is dispatched 
+
+```js
+document.dispatchEvent(new CustomEvent('foo-document-event', { detail: {}}));
+```
+
+### ES7 decorator
+
+`bindDOMEvents` can be used as a decorator
+
+```
+import alt from './alt';
+import {createActions} from 'alt-utils/lib/decorators';
+import {bindDOMEvents} from 'alt-dom-events';
+
+@bindDOMEvents({
+  'foo-document-event': 'foo',
+  'bar-document-event': 'bar'
+})
+@createActions(alt)
+class FooActions {
+  constructor() {
+    this.generateActions('foo', 'bar');
+  }
+}
+
+export default FooActions;
+```
+
+## License
+
+MIT

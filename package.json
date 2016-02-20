@@ -1,8 +1,9 @@
 {
   "name": "alt-dom-events",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "dom events support for alt",
   "main": "dist/index.js",
+  "license": "MIT",
   "keywords": [
     "alt"
   ],
@@ -26,6 +27,7 @@
     "karma-sinon": "^1.0.4",
     "karma-sinon-chai": "^1.2.0",
     "lolex": "^1.4.0",
+    "mocha": "^2.4.5",
     "phantomjs-prebuilt": "^2.1.4",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0"
