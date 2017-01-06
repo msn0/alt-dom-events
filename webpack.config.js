@@ -10,13 +10,9 @@ module.exports = {
     filename: '[name].js',
     libraryTarget: 'umd'
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({minimize: true})
-  ],
   module: {
     loaders: [{
       test: /\.js$/,
-      exclude: /node_modules/,
       loader: 'babel'
     }]
   }
