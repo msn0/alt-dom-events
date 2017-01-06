@@ -1,4 +1,4 @@
-# alt-dom-events
+# alt-dom-events [![Build Status](https://travis-ci.org/msn0/alt-dom-events.svg?branch=master)](http://travis-ci.org/msn0/alt-dom-events)
 
 > dom events support for [alt](https://github.com/goatslacker/alt)
 
