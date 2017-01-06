@@ -1,4 +1,4 @@
-import {bindDOMEvents} from './dist/index';
+import {bindDOMEvents} from './';
 import test from 'ava';
 import jsdom from 'jsdom';
 
