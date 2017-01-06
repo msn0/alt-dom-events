@@ -1,6 +1,6 @@
 {
   "name": "alt-dom-events",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "dom events support for alt",
   "main": "dist/index.js",
   "license": "MIT",
