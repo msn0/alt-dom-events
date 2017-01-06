@@ -1,13 +1,4 @@
-// http://www.datchley.name/currying-vs-partial-application/
-function curry(fn) {
-  return function curried(...args) {
-    return args.length >= fn.length ?
-      fn.call(this, ...args) :
-      (...rest) => {
-        return curried.call(this, ...args, ...rest);
-      };
-  };
-}
+import curry from 'dead-simple-curry';
 
 function bindEventToAction(eventName, action) {
   try {
